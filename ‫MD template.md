@@ -1,16 +1,6 @@
-# ADANET
+# Project Title
 
-AdaNet: Adaptive Structural Learning of Artificial Neural Networks
-ADANET project is an implementation based on an article by Cortes: http://proceedings.mlr.press/v70/cortes17a.html
-
-## Article Abstract
-
-We present a new theoretical framework for analyzing and learning artificial neural
-networks. Our approach simultaneously and adaptively learns both the structure
-of the network as well as its weights. The methodology is based upon and accompanied
-by strong data-dependent theoretical learning guarantees. We present
-some preliminary results to show that the final network architecture adapts to the
-complexity of a given problem.
+One Paragraph of project description goes here
 
 ## Getting Started
 
@@ -26,7 +16,7 @@ Give examples
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+A step by step series of examples that tell you have to get a development env running
 
 Say what the step will be
 
@@ -95,4 +85,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Hat tip to anyone who's code was used
 * Inspiration
 * etc
-
