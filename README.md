@@ -1,7 +1,8 @@
 # ADANET
 
 AdaNet: Adaptive Structural Learning of Artificial Neural Networks
-ADANET project is a Python implementation based on an article by Cortes: http://proceedings.mlr.press/v70/cortes17a.html
+ADANET project is a Python implementation based on an article by Cortes: http://proceedings.mlr.press/v70/cortes17a.html  
+or the original article publication, see in [AdaNet-Original publication pdf file](https://github.com/davidabek1/adanet/blob/master/AdaNet-Original%20publication___d2nn.pdf)
 
 ## Article Abstract
 
@@ -68,9 +69,8 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [VScode](https://code.visualstudio.com/) - Python 3.6 coding
+* [Tensorflow](https://www.tensorflow.org/) - model implementation, article based
 
 ## Contributing
 
@@ -78,17 +78,17 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+We use VScode builtin Git Source control with remote to this github adanet repository 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **David Abekasis**
+* **Eric Schudy**
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project has no license
 
 ## Acknowledgments
 
