@@ -1,7 +1,7 @@
 # ADANET
 
 AdaNet: Adaptive Structural Learning of Artificial Neural Networks
-ADANET project is an implementation based on an article by Cortes: http://proceedings.mlr.press/v70/cortes17a.html
+ADANET project is a Python implementation based on an article by Cortes: http://proceedings.mlr.press/v70/cortes17a.html
 
 ## Article Abstract
 
