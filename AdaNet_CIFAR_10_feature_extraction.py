@@ -55,6 +55,12 @@ def train_test_dataset(feat_pair):
     # 155 = hog((orient=8)* ((row_image/ppc)=32/8=4) * ((col_image/ppc)=32/8=4) = 128) + color_hist(bins channel1*2*3 = 3*3*3 = 27)
     X_train = np.zeros((X_train_raw.shape[0],155))
     X_test = np.zeros((X_test_raw.shape[0],155))
+    mask_train_cls1 = (y_train_raw == feat_pair[0])
+    y_train_raw[mask_train_cls1] = 1
+    y_train_raw[~mask_train_cls1] = 0
+    mask_test_cls1 = (y_test_raw == feat_pair[0])
+    y_test_raw[mask_test_cls1] = 1
+    y_test_raw[~mask_test_cls1] = 0
     for row in range(X_train_raw.shape[0]):
         f1 = feat_hog(X_train_raw[row,:,:,:])
         f2 = feat_color_hist(X_train_raw[row,:,:,:])
