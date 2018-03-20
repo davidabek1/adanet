@@ -1,4 +1,13 @@
+'''
+CIFAR-10 Image Category Dataset
+The CIFAR-10 data ( https://www.cs.toronto.edu/~kriz/cifar.html ) contains 60,000 32x32 color images of 10 classes.
+It was collected by Alex Krizhevsky, Vinod Nair, and Geoffrey Hinton.
+Alex Krizhevsky maintains the page referenced here.
+This is such a common dataset, that there are built in functions in TensorFlow to access this data.
 
+Running this command requires an internet connection and a few minutes to download all the images.
+
+'''
 import os
 # import matplotlib.pyplot as plt
 import numpy as np
@@ -11,13 +20,7 @@ from skimage import color
 
 CF10_Labels=['airplane','automobile','bird','cat','deer','dog','frog','horse','ship','truck']
 
-# CIFAR-10 Image Category Dataset
-# The CIFAR-10 data ( https://www.cs.toronto.edu/~kriz/cifar.html ) contains 60,000 32x32 color images of 10 classes.
-# It was collected by Alex Krizhevsky, Vinod Nair, and Geoffrey Hinton.
-# Alex Krizhevsky maintains the page referenced here.
-# This is such a common dataset, that there are built in functions in TensorFlow to access this data.
 
-# Running this command requires an internet connection and a few minutes to download all the images.
 # (CF10_X_train, CF10_y_train), (CF10_X_test, CF10_y_test) = tf.contrib.keras.datasets.cifar10.load_data()
 
 # Next Example will show how many images in training (50,000), and show the first image (a frog)
@@ -46,7 +49,7 @@ def feat_color_hist(ndImage):
 
 
 def train_test_dataset(feat_pair):
-    savedfile = os.path.join('datasets','CIFAR10_pair_{}_{}.npz'.format(CF10_Labels[feat_pair[0]],CF10_Labels[feat_pair[1]]))
+    savedfile = os.path.join(os.path.dirname(os.path.realpath(__file__)),'datasets','CIFAR10_pair_{}_{}.npz'.format(CF10_Labels[feat_pair[0]],CF10_Labels[feat_pair[1]]))
     if os.path.exists(savedfile):
         npzfile = np.load(savedfile)
         X_train, y_train, X_test, y_test = npzfile['X_train'], npzfile['y_train'], npzfile['X_test'], npzfile['y_test']
@@ -94,7 +97,7 @@ def save_pair_dataset_feat_extracted(feat_pair,X_train, y_train, X_test, y_test)
     datasets_path = 'datasets'
     if not(os.path.exists(datasets_path)):
         os.makedirs(datasets_path)
-    file2save = os.path.join('datasets','CIFAR10_pair_{}_{}.npz'.format(CF10_Labels[feat_pair[0]],CF10_Labels[feat_pair[1]]))
+    file2save = os.path.join(os.path.dirname(os.path.realpath(__file__)),'datasets','CIFAR10_pair_{}_{}.npz'.format(CF10_Labels[feat_pair[0]],CF10_Labels[feat_pair[1]]))
     if not(os.path.exists(file2save)):
         np.savez_compressed(file2save,X_train=X_train, y_train=y_train, X_test=X_test, y_test=y_test)
 

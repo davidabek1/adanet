@@ -83,7 +83,6 @@ We use VScode builtin Git Source control with remote to this github adanet repos
 ## Authors
 
 * **David Abekasis**
-* **Eric Schudy**
 
 
 ## License
