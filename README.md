@@ -5,17 +5,17 @@ AdaNet: Adaptive Structural Learning of Artificial Neural Networks
 Reference: Cortes, C., Gonzalvo, X., Kuznetsov, V., Mohri, M. & Yang, S.. (2017). AdaNet: Adaptive Structural Learning of Artificial Neural Networks. Proceedings of the 34th International Conference on Machine Learning, in PMLR 70:874-883
 
 This Python project is aimed to implement an API of AdaNet, using algorithm based on the article: http://proceedings.mlr.press/v70/cortes17a.html
-In short this model is building from scratch a neural network according to the data complexity it fits,
-This is why it named as adaptive model. For this implementation the problem at hand is always a binary classification.
-During fit operation it will build the hidden layers and number of neurons in each layer .
-The decision if to go deeper (add hidden layer) or to go wider (add neuron to existing layer),
-Or update an existing neuron weight is done in a closed form of calculations
-(By using Banach space duality) shown in the article.
-Lastly it will optimize the weight of the best neuron (added or existing), update parameters and iterate.
-The article talks about several variants of AdaNet, this is the AdaNet.CVX implementation,
-Explained on Appendix C - that solves a convex sub problem in each step in a closed form.
-Further detailed explanations of this variant is shown in a previous version of the article [v.1]:
-All versions: https://arxiv.org/abs/1607.01097
+In short this model is building from scratch a neural network according to the data complexity it fits,  
+This is why it named as adaptive model. For this implementation the problem at hand is always a binary classification.  
+During fit operation it will build the hidden layers and number of neurons in each layer . 
+The decision if to go deeper (add hidden layer) or to go wider (add neuron to existing layer),  
+Or update an existing neuron weight is done in a closed form of calculations  
+(By using Banach space duality) shown in the article.  
+Lastly it will optimize the weight of the best neuron (added or existing), update parameters and iterate.  
+The article talks about several variants of AdaNet, this is the AdaNet.CVX implementation,  
+Explained on Appendix C - that solves a convex sub problem in each step in a closed form. 
+Further detailed explanations of this variant is shown in a previous version of the article [v.1]:  
+All versions: https://arxiv.org/abs/1607.01097  
 v.1: https://arxiv.org/abs/1607.01097v1
 
 or directly here on GitHub: [AdaNet-v.1](https://github.com/davidabek1/adanet/blob/master/AdaNet-%20Adaptive%20Structural%20Learning%20of%20Artificial%20Neural%20Networks___1607.01097v1.pdf)
@@ -55,15 +55,12 @@ import tensorflow
 ### Installing
 
 Put the Python code files in the same root folder of the project: 
-AdaNet_CVX.py - API main file
-test_adanet.py - test code to run several datasets and results of the model
-AdaNet_CIFAR_10_feature_extraction.py - CIFAR-10 dataset and features extraction
-twospirals.py - toy dataset creation as part of testing
+AdaNet_CVX.py - API main file  
+test_adanet.py - test code to run several datasets and results of the model  
+AdaNet_CIFAR_10_feature_extraction.py - CIFAR-10 dataset and features extraction  
+twospirals.py - toy dataset creation as part of testing 
 
-- 
--  
-- 
-adanet_clf.adaParams, adanet_clf.history both are dictionaries with keys indicating the operation of the model. adanet_clf.predict(X_test)
+This next lines of code will enable the use of the API  
 
 ```
 from AdaNet_CVX import AdaNetCVX             # first import the module class 
